@@ -13,13 +13,13 @@ public class Util {
         prefs = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
     }
 
-    public void setTimeDifference(long millis) {
+    public void setLastTimeDifference(long millis) {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putLong("BOOT_TIME", millis);
         editor.commit();
     }
 
-    public long getTimeDifference() {
+    public long getLastTimeDifference() {
         return prefs.getLong("BOOT_TIME", -1);
     }
 

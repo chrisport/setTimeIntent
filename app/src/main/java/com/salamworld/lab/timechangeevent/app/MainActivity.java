@@ -2,7 +2,6 @@ package com.salamworld.lab.timechangeevent.app;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.SystemClock;
 
 public class MainActivity extends Activity {
 
@@ -18,6 +17,6 @@ public class MainActivity extends Activity {
 
         //store this difference in SharedPreference (or anywhere)
         Util util = new Util(this);
-        util.setTimeDifference(difference);
+        util.setLastTimeDifference(difference);
     }
 }

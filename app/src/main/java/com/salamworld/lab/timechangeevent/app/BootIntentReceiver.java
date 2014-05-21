@@ -3,7 +3,6 @@ package com.salamworld.lab.timechangeevent.app;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.SystemClock;
 
 /**
  * This part is untested. On Boot of the device, we want to calculate
@@ -19,6 +18,6 @@ public class BootIntentReceiver extends BroadcastReceiver {
 
         //store the new difference as current difference for the next time
         Util util = new Util(context);
-        util.setTimeDifference(difference);
+        util.setLastTimeDifference(difference);
     }
 }
