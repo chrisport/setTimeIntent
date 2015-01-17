@@ -2,7 +2,9 @@ SET_TIME Intent: calculate previous time
 =============
 
 This is an example how the previous time can be calculated in event of a "SET_TIME"-intent.
-[My original answer on stackoverflow:](http://stackoverflow.com/questions/23785770/get-difference-between-old-and-new-time/23790083#23790083)
+
+My original answer from on [Stackoverflow:](http://stackoverflow.com/questions/23785770/get-difference-between-old-and-new-time/23790083#23790083)
+
 The main idea is this: You need a independent time to compare to, we can take SystemClock.elapsedRealtime() which is the time since the device booted. Now we can calculate the difference between this elapsedTime and System.currentTimeMillis(). This difference will always be constant, unless the SystemTime has changed (e.g. by the user). In this case, we can calculate the new difference and compare them to determine how much the it has changed.
 
 Let's do it:
